@@ -1,0 +1,61 @@
+html, body{
+  margin:0;
+  padding:0;
+  height:100%;
+  overflow:hidden;
+}
+header {
+  height: 70px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  background-color: #666;
+}
+#content {
+  width: 100%;
+  background-color: #f5f5f5;
+  position: absolute;
+  top:70px;
+  bottom: 0px;
+  overflow: auto;
+}
+footer {
+  height: 40px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  background-color: #333;
+	z-index: 4;
+
+  
+}
+.meerg {
+  border-top-color: #f5f5f5 ! important ;
+}
+.mois {
+  text-align: center;
+  font-weight: bold;
+}
+
+.header-style {
+	text-align: center;
+	font-weight: bold;
+	color: white; 
+	padding-top: 18px;
+	font-size: 30px;
+}
+
+.footer-style {
+	padding-top: 25px;
+	color: white;
+	font-size: 15px;
+	
+}
+
+.editors-style {
+	text-align: right;
+	color: white;
+	font-size: 15px;
+	
+}
+

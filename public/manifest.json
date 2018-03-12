@@ -1,0 +1,23 @@
+{
+    "dir": "ltr",
+    "lang": "en",
+    "name": "PFE",
+    "scope": "/",
+    "display": "fullscreen",
+    "start_url": "/",
+    "short_name": "PFE-NSA",
+    "background_color": "#2C3E50",
+    "theme_color": "#18BC9C",
+    "description": "PFE-NSA",
+    "orientation": "any",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": [
+      {
+   "src": "/images/HR.png",
+   "sizes": "144x144",
+   "type": "image\/png",
+   "density": "0.75"
+  }
+    ]
+}

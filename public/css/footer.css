@@ -1,0 +1,373 @@
+/* remove all the bullets, borders and padding from the default list styling */
+
+.menu ul {
+
+padding:0;
+
+margin:0;
+
+list-style-type:none;
+
+}
+
+.menu ul ul {
+
+width:400px;
+
+}
+
+/* float the list to make it horizontal and a relative positon so that you can control the dropdown menu positon */
+
+.menu li {
+
+float:left;
+
+width:450px;
+
+position:relative;
+
+}
+
+/* style the links for the top level */
+
+.menu a, .menu a:visited {
+
+display:block;
+
+font-size:15px;
+
+text-decoration:none; 
+
+color:#9FB1BC; 
+
+width:437px; 
+
+height:40px; 
+
+border:1px solid #fff; 
+
+border-width:1px 1px 0 0; 
+
+background:#2E5266; 
+
+padding-left:10px; 
+
+line-height:39px;
+
+}
+
+/* a hack so that IE5.5 faulty box model is corrected */
+
+* html .menu a, * html .menu a:visited {
+
+width:150px;
+
+width:139px;
+
+}
+
+
+
+/* style the second level background */
+
+.menu ul ul a.drop, .menu ul ul a.drop:visited {
+
+background:#949e7c;
+
+}
+
+/* style the second level hover */
+
+.menu ul ul a.drop:hover {
+
+background:#c9ba65;
+
+}
+
+.menu ul ul :hover > a.drop {
+
+background:#c9ba65;
+
+}
+
+/* style the third level background */
+
+.menu ul ul ul a, .menu ul ul ul a:visited {
+
+background:#e2dfa8;
+
+}
+
+/* style the third level hover */
+
+.menu ul ul ul a:hover{
+
+background:#7aaecc;
+
+}
+
+.menu ul ul ul :hover > a {
+
+background:#7aaecc;
+
+}
+
+
+
+/* style the table so that it takes no part in the layout - required for IE to work */
+
+.menu table {border-collapse:collapse; border:0; position:absolute; left:0; bottom:-1px;}
+
+
+
+/* hide the sub levels and give them a positon absolute so that they take up no room */
+
+.menu ul ul {
+
+visibility:hidden;
+
+position:absolute;
+
+bottom:40px;
+
+left:0; 
+
+width:150px;
+
+}
+
+* html .menu ul ul {
+
+bottom:30px;
+
+}
+
+/* position the third level flyout menu */
+
+.menu ul ul ul{
+
+left:250px; 
+
+bottom:0;
+
+width:250px;
+
+}
+
+/* position the third level flyout menu for a left flyout */
+
+.menu ul ul ul.left {
+
+left:-150px;
+
+}
+
+
+
+
+
+/* style the second level links */
+
+.menu ul ul a, .menu ul ul a:visited {
+
+background:#7aaecc; 
+
+color:#000; 
+
+height:auto; 
+
+line-height:1em; 
+
+padding:5px 10px; 
+
+width:428px
+
+/* yet another hack for IE5.5 */
+
+}
+
+* html .menu ul ul a{
+
+width:150px;
+
+w\idth:129px;
+
+}
+
+
+
+
+
+/* style the top level hover */
+
+.menu a:hover, .menu ul ul a:hover{
+
+color:#fff; 
+
+background:#949e7c;
+
+}
+
+.menu :hover > a, .menu ul ul :hover > a {
+
+color:#fff;
+
+background:#949e7c;
+
+}
+
+
+
+/* make the second level visible when hover on first level list OR link */
+
+.menu ul li:hover ul,
+
+.menu ul a:hover ul{
+
+visibility:visible;
+
+height:auto;
+
+}
+
+/* keep the third level hidden when you hover on first level list OR link */
+
+.menu ul :hover ul ul{
+
+display:none;
+
+}
+
+/* keep the fourth level hidden when you hover on second level list OR link */
+
+.menu ul :hover ul :hover ul ul{
+
+display:none;
+
+}
+
+/* make the third level visible when you hover over second level list OR link */
+
+.menu ul :hover ul :hover ul{ 
+
+display:block;
+
+bottom:0;
+
+}
+
+/* make the fourth level visible when you hover over third level list OR link */
+
+.menu ul :hover ul :hover ul :hover ul { 
+
+display:block;
+
+bottom:0;
+
+}
+.menu {
+  z-index=7;
+}
+
+
+/********************** Nouvelle version  ***********************/
+/********************Responsive-Menu-Footer******************************/
+.nav-bar {
+    background: #000;
+    width: 100%;
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	left: 0px
+	
+    
+}
+
+.nav-bar__label {
+    color: #fff;
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: inherit;
+}
+
+.nav-bar__label::after,
+.nav-bar__sub-label::after {
+    content: " +";
+}
+
+.nav-bar__label,
+.nav-bar__sub-label {
+    cursor: pointer;
+}
+
+.nav-bar__list {
+    background: #000;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.nav-bar__list,
+[id^="toggle"] {
+    display: none;
+}
+
+[id^="toggle"]:checked + .nav-bar__list {
+    display: block;
+}
+
+.nav-bar__list-item {
+    display: block;
+}
+
+.nav-bar__link,
+.nav-bar__sub-label {
+    color: #fff;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    word-wrap: break-word;
+}
+
+.nav-bar__list-item .nav-bar__list-item .nav-bar__link,
+.nav-bar__list-item .nav-bar__list-item .nav-bar__sub-label {
+    padding: 10px 10px 10px 30px;
+}
+
+.nav-bar__link:hover,
+.nav-bar__link:active,
+.nav-bar__sub-label:hover {
+    background: #666;
+}
+
+@media all and (min-width : 992px) {
+    .nav-bar > .nav-bar__label {
+        display: none;
+    }
+
+    .nav-bar > .nav-bar__list {
+        display: block;
+    }
+
+    .nav-bar > .nav-bar__list > .nav-bar__list-item {
+        display: inline-block;
+        position: relative;
+        width: 33%;
+    }
+
+    .nav-bar__list-item .nav-bar__list {
+        position: absolute;
+		bottom: 95%;
+		right: auto;
+		left: auto;
+		margin-bottom: -1px;
+    }
+
+    .nav-bar__list-item .nav-bar__list-item .nav-bar__link,
+    .nav-bar__list-item .nav-bar__list-item .nav-bar__sub-label {
+        padding: 10px 20px;
+    }
+}
